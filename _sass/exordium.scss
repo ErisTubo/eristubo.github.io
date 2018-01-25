@@ -1,0 +1,202 @@
+// TABLE OF CONTENT
+//
+// 1.0 Standards
+// 1.0 Imports
+// 1.0 Variables
+// 1.0 Theme Base
+// 1.0 Layouts
+// 1.0 Header
+// 1.0
+// 1.0 Footer
+// 1.0
+
+// 1.0 Standarts ---------------------------------------------------------------
+@charset "utf-8";
+
+// 1.0 Imports -----------------------------------------------------------------
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Fredericka+the+Great');
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css);
+
+// 1.0 Variables ---------------------------------------------------------------
+// Colors
+$accentcolor1 :                          #b1415c;
+$accentcolor2 :                          #ff2b5e;
+$accentcolor :                           $accentcolor2;
+
+$fontcolordark :                         #333;
+$fontcolorlight :                        white;
+$fontcolor :                             $accentcolor2;
+
+$papergradientmax :                      rgba(0,0,0,0.01);
+$papergradientmin :                      rgba(0,0,0,0.07);
+
+$articlebackground :                     rgba(255,43,94,0.2);
+
+// 1.0 Theme Base --------------------------------------------------------------
+body {
+  margin-top: 32px;
+  font-family: 'Open Sans', sans-serif;
+}
+
+// 1.0 Layouts -----------------------------------------------------------------
+.wrapper {
+  margin: 0 auto;
+  width: 50%;
+  @media (max-width: 1200px) {
+    width: 60%
+  }
+  @media (max-width: 1000px) {
+    width: 70%
+  }
+  @media (max-width: 700px) {
+    width: 80%
+  }
+  @media (max-width: 400px) {
+    width: 90%
+  }
+  @media (max-width: 300px) {
+    width: 100%
+  }
+}
+main {
+  margin: 10px 20px;
+}
+article {
+  background: $fontcolorlight;
+  &:hover {
+    background: $articlebackground;
+    transition: all 1s ease;
+    header {
+      h1 {
+        color: $fontcolordark;
+        transition: all 0.5s ease;
+        &:after {
+          background: $fontcolordark;
+        }
+      }
+    }
+  }
+  header {
+    cursor: pointer;
+    text-align: center;
+    h1 {
+      display: inline-block;
+      color: $accentcolor;
+      transition: all 1s ease;
+      &:after {
+        position: relative;
+        top: 3px;
+        opacity: 0.8;
+        margin: 0 auto;
+        transition: all 1s ease;
+        display: block;
+        content: '';
+        height: 1px;
+        max-width: 0;
+        background: $accentcolor;
+      }
+    }
+    p {
+      margin: 0;
+      font-size: 12px;
+    }
+    &:hover {
+      h1 {
+        &:after {
+          transition: all 1s ease;
+          width: auto;
+          max-width: 1000px;
+        }
+      }
+    }
+  }
+  section {
+    padding: 10px;
+    opacity: 0;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 1s ease;
+
+    border-width: 1px;
+    border-style: solid;
+    -webkit-border-image: -webkit-gradient(linear, 0 100%, 0 0, from($papergradientmin), to($papergradientmax)) 1 100%;
+    -webkit-border-image: -webkit-linear-gradient(bottom, $papergradientmin, $papergradientmax) 1 100%;
+    -moz-border-image:    -moz-linear-gradient(bottom, $papergradientmin, $papergradientmax) 1 100%;
+    -o-border-image:      -o-linear-gradient(bottom, $papergradientmin, $papergradientmax) 1 100%;
+    border-image:         linear-gradient(to top, $papergradientmin, $papergradientmax) 1 100%;
+  }
+  .show {
+    padding: 32px;
+    opacity: 1;
+    height: auto;
+    max-height: 7000px;
+    transition: all 2s ease;
+  }
+  footer {
+    background: transparent;
+    opacity: 0.1;
+  }
+}
+
+// 1.0 Header ------------------------------------------------------------------
+header {
+  h1 {
+    font-family: 'Fredericka the Great', cursive;
+    font-weight: lighter;
+  }
+}
+
+// 1.0 Content -----------------------------------------------------------------
+.post-meta {
+  time {
+    width: 200px;
+  }
+  span {
+    i {
+      top: 3px;
+      font-size: 32px;
+      opacity: 0.7;
+      color: $accentcolor;
+    }
+  }
+}
+
+// 1.0 Footer ------------------------------------------------------------------
+footer {
+  opacity: 0.9;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.006), rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.006) );
+  padding: 0px 12px 2px 12px;
+  text-align: center;
+  margin: 10px auto;
+  color: $accentcolor;
+  div {
+    background: linear-gradient(to left, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.01) );
+    height: 1px;
+  }
+  p {
+    padding-top: 12px;
+    span {
+      a {
+        color: inherit;
+        opacity: 0.6;
+        margin: 10px;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        font-size: 24px;
+        &:hover {
+          opacity: 1;
+          transition: all 0.3s ease;
+        }
+      }
+    }
+  }
+  small {
+    font-size: 12px;
+    font-weight: 100;
+    opacity: 0.7;
+  }
+}
+.fa {
+
+}
