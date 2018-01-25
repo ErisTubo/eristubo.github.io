@@ -1,5 +1,21 @@
 <main>
-  {% for post in site.posts %}
-   {{ post }}
-  {% endfor %}
+  <h2 class="section-title">Pixel Dailies</h2>
+  <section class="gallery">
+    {% for post in site.posts | %}
+      {% if post.categories contains 'pixeldailies' %}
+        <span>
+          {{ post.excerpt | remove: '<p>' | remove: '</p>' }}
+        </span>
+      {% endif %}
+    {% endfor %}
+  </section>
+  <h2 class="section-title">Posts</h2>
+  <section>
+    {% for post in site.posts %}
+      {% if post.categories contains 'pixeldailies' %}
+      {% else %}
+        {{ post }}
+      {% endif %}
+    {% endfor %}
+  </section>
 </main>
