@@ -151,7 +151,6 @@ article {
 
 // 1.0 Header ------------------------------------------------------------------
 .mainheader {
-  margin: 100px;
   background: rgba($accentcolor,0.07);
   box-shadow: 0 0 3px 1px rgba($accentcolor,0.1);
   border-top: 1px solid rgba(255,255,255,0.9);
@@ -233,24 +232,25 @@ nav {
         border: 1px solid rgba($accentcolor, 0.7);
       }
       .theme {
+        margin-top: -7px;
         width: 90px;
         border-top: 1px solid rgba(255, 43, 94, 0);
         color: $accentcolor;
         position: absolute;
         font-size: 14px;
-        left: 49%;
+        left: 51%;
         transform: translate(-50%, 230%);
         transition: all 1s ease;
         opacity: 0.8;
         font-weight: bold;
       }
       .fin {
-        width: 90px;
+        width: 110px;
         color: $accentcolor;
         border-top: 1px solid rgba(255, 43, 94, 0.5);
         position: absolute;
-        font-size: 14px;
-        left: 49%;
+        font-size: 12px;
+        left: 51%;
         transform: translate(-50%, 340%);
         transition: all 1s ease;
         opacity: 0.8;
@@ -261,7 +261,7 @@ nav {
         border-top: 1px solid rgba(255, 43, 94, 0.5);
         position: absolute;
         font-size: 14px;
-        left: 49%;
+        left: 52%;
         transform: translate(-50%, 340%);
         transition: all 1s ease;
         opacity: 0.8;
@@ -272,7 +272,7 @@ nav {
         border-top: 1px solid rgba(255, 43, 94, 0.5);
         position: absolute;
         font-size: 14px;
-        left: 49%;
+        left: 51%;
         transform: translate(-50%, 340%);
         transition: all 1s ease;
         opacity: 0.8;

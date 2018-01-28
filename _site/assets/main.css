@@ -92,7 +92,6 @@ article {
     border-top: 1px solid rgba(0, 0, 0, 0.07); }
 
 .mainheader {
-  margin: 100px;
   background: rgba(255, 43, 94, 0.07);
   box-shadow: 0 0 3px 1px rgba(255, 43, 94, 0.1);
   border-top: 1px solid rgba(255, 255, 255, 0.9);
@@ -158,23 +157,24 @@ nav {
       .gallery div div img[alt="HLD"] {
         border: 1px solid rgba(255, 43, 94, 0.7); }
       .gallery div div .theme {
+        margin-top: -7px;
         width: 90px;
         border-top: 1px solid rgba(255, 43, 94, 0);
         color: #ff2b5e;
         position: absolute;
         font-size: 14px;
-        left: 49%;
+        left: 51%;
         transform: translate(-50%, 230%);
         transition: all 1s ease;
         opacity: 0.8;
         font-weight: bold; }
       .gallery div div .fin {
-        width: 90px;
+        width: 110px;
         color: #ff2b5e;
         border-top: 1px solid rgba(255, 43, 94, 0.5);
         position: absolute;
-        font-size: 14px;
-        left: 49%;
+        font-size: 12px;
+        left: 51%;
         transform: translate(-50%, 340%);
         transition: all 1s ease;
         opacity: 0.8; }
@@ -184,7 +184,7 @@ nav {
         border-top: 1px solid rgba(255, 43, 94, 0.5);
         position: absolute;
         font-size: 14px;
-        left: 49%;
+        left: 52%;
         transform: translate(-50%, 340%);
         transition: all 1s ease;
         opacity: 0.8; }
@@ -194,7 +194,7 @@ nav {
         border-top: 1px solid rgba(255, 43, 94, 0.5);
         position: absolute;
         font-size: 14px;
-        left: 49%;
+        left: 51%;
         transform: translate(-50%, 340%);
         transition: all 1s ease;
         opacity: 0.8; }
