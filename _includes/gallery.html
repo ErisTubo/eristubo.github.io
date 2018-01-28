@@ -1,0 +1,12 @@
+<h2 class="section-title">Pixel Dailies</h2>
+<section class="gallery">
+  {% for post in site.posts | %}
+    {% if post.categories contains 'pixeldailies' %}
+      <div>
+        <div>
+          {{ post.excerpt | remove: '<p>' | remove: '</p>' }}
+        </div>
+      </div>
+    {% endif %}
+  {% endfor %}
+</section>
