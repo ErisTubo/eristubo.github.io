@@ -1,4 +1,27 @@
 <h2 class="section-title">Pixel Dailies</h2>
+<nav class="gallery-nav unselectable">
+  <form class="nav-toggles nav-untoggles">
+    <label>Pixel Dailies</label>
+    <input type="checkbox" ><span>{{ site.categories.pixeldailies.size }}</span></input>
+  </form>
+  <form class="nav-toggles nav-toggeled ">
+    <label for="fin" >PD finished</label>
+    <input type="checkbox" id="fin" checked><span class="finbadge">{{ site.tags['fin'].size }}</span></input>
+  </form>
+  <form class="nav-toggles nav-toggeled">
+    <label for="wip" >PD in progress</label>
+    <input type="checkbox" id="wip" checked><span class="wipbadge">{{ site.tags['wip'].size }}</span></input>
+  </form>
+  <form class="nav-toggles">
+    <label for="hld" >PD on hold</label>
+    <input type="checkbox" id="hld" checked><span class="hldbadge">{{ site.tags['hld'].size }}</span></input>
+  </form>
+  <div id="pbar">
+    <div id="pbar-fin"></div>
+    <div id="pbar-wip"></div>
+    <div id="pbar-hld"></div>
+  </div>
+</nav>
 <section class="gallery">
   {% for post in site.posts | %}
     {% if post.categories contains 'pixeldailies' %}

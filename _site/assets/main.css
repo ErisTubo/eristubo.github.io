@@ -113,8 +113,100 @@ nav {
   text-align: center;
   margin: 0 auto; }
 
+.gallery-nav {
+  margin: 20px;
+  padding-left: 2px; }
+
+.nav-toggles {
+  margin: 3px;
+  border: 1px solid #ff2b5e;
+  display: inline-block;
+  padding: 2px 0px 2px 5px;
+  border-radius: 3px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  font-size: 12px;
+  box-shadow: 0 2px 1px 0px rgba(255, 43, 94, 0.4);
+  transition: all 0.5s ease;
+  cursor: pointer; }
+  .nav-toggles:hover {
+    background: rgba(255, 43, 94, 0.1);
+    transition: all 0.2s ease; }
+  .nav-toggles label {
+    pointer-events: none;
+    cursor: inherit; }
+  .nav-toggles input {
+    cursor: inherit;
+    appearance: none;
+    -webkit-appearance: none; }
+  .nav-toggles span {
+    width: 30px;
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    padding: 2px 5px;
+    background: rgba(255, 43, 94, 0.7);
+    color: white; }
+  .nav-toggles .finbadge {
+    background: #4cc61e; }
+  .nav-toggles .wipbadge {
+    background: #e4ba21; }
+  .nav-toggles .hldbadge {
+    background: #f27e3f; }
+
+.nav-toggeled {
+  box-shadow: inset 0 2px 0px 0px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 43, 94, 0.5); }
+  .nav-toggeled label, .nav-toggeled input {
+    top: 2px;
+    position: relative;
+    z-index: -1; }
+  .nav-toggeled span {
+    box-shadow: inset 0 2px 0px 0px rgba(0, 0, 0, 0.3); }
+  .nav-toggeled .finbadge {
+    background: rgba(76, 198, 30, 0.7); }
+  .nav-toggeled .wipbadge {
+    background: rgba(245, 194, 14, 0.7); }
+  .nav-toggeled .hldbadge {
+    background: rgba(255, 147, 88, 0.7); }
+
+.nav-untoggles {
+  box-shadow: 0 0px 0px 0px black;
+  cursor: default;
+  border-style: dashed;
+  border-color: rbba(#ff2b5e, 0.6); }
+  .nav-untoggles:hover {
+    background: rgba(255, 43, 94, 0); }
+
+.unselectable {
+  -webkit-user-select: none;
+  /* Chrome all / Safari all */
+  -moz-user-select: none;
+  /* Firefox all */
+  -ms-user-select: none;
+  /* IE 10+ */
+  user-select: none;
+  /* Likely future */ }
+
+#pbar {
+  margin: 3px;
+  margin-top: 16px;
+  text-align: center; }
+  #pbar div {
+    display: inline-block;
+    text-align: center;
+    width: 0;
+    height: 3px;
+    transition: all 3s ease; }
+  #pbar #pbar-fin {
+    background: rgba(76, 198, 30, 0.7); }
+  #pbar #pbar-wip {
+    background: rgba(245, 194, 14, 0.7); }
+  #pbar #pbar-hld {
+    background: rgba(255, 147, 88, 0.7); }
+
 .section-title {
   margin-top: 120px;
+  padding-left: 8px;
   font-family: 'Fredericka the Great', cursive;
   font-weight: lighter;
   text-transform: uppercase;
@@ -132,6 +224,8 @@ nav {
 
 .gallery {
   text-align: center; }
+  .gallery .project-hide {
+    display: none; }
   .gallery div {
     width: 128px;
     height: 128px;
