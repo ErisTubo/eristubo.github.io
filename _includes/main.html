@@ -1,6 +1,5 @@
 <main>
-  {% include gallery.html %}
-  <h2 class="section-title">Posts</h2>
+  <h2 class="section-title unselectable">Blog</h2>
   <section>
     {% for post in site.posts %}
       {% if post.categories contains 'pixeldailies' %}
@@ -9,4 +8,5 @@
       {% endif %}
     {% endfor %}
   </section>
+  {% include gallery.html %}
 </main>

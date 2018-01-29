@@ -41,7 +41,8 @@ $articlebackground :                     rgba(255,43,94,0.2);
 body {
   margin-top: 32px;
   font-family: 'Open Sans', sans-serif;
-  background: rgba(255,200,180,0.02);
+  background: rgba(255,200,180,0.3);
+  margin-bottom: 0;
 }
 
 // 1.0 Layouts -----------------------------------------------------------------
@@ -68,12 +69,14 @@ main {
   margin: 10px 20px;
 }
 article {
+  box-shadow: 0 0 18px -8px rgba($accentcolor, 0.9);
   margin-bottom: 32px;
   background: $fontcolorlight;
+  border:1px solid rgba($accentcolor, 0.2);
   transition: all 1s ease;
   &:hover {
-    background: $articlebackground;
     transition: all 1s ease;
+    border:1px solid rgba($accentcolor, 0.5);
     header {
       h1 {
         color: $fontcolordark;
@@ -125,15 +128,6 @@ article {
     max-height: 0px;
     overflow: hidden;
     transition: all 1s ease;
-    border-left: 1px solid $papergradientmin;
-    border-right: 1px solid $papergradientmin;
-    border-bottom: 1px solid $papergradientmin;
-  }
-  .header {
-    border-left: 1px solid $papergradientmin;
-    border-right: 1px solid $papergradientmin;
-    border-top: 1px solid $papergradientmin;
-    opacity: 1;
   }
   .show {
     padding: 32px;
@@ -151,19 +145,50 @@ article {
 
 // 1.0 Header ------------------------------------------------------------------
 .mainheader {
-  background: rgba($accentcolor,0.07);
-  box-shadow: 0 0 3px 1px rgba($accentcolor,0.1);
+  background: rgba($accentcolor,0.8);
+  box-shadow: 0 0 90px -10px rgba($accentcolor,0.7);
   border-top: 1px solid rgba(255,255,255,0.9);
   border-bottom: 1px solid rgba(255,255,255,0.6);
   border-left: 1px solid rgba(255,255,255,0.7);
   border-right: 1px solid rgba(255,255,255,0.7);
   border-radius: 1px;
-  padding: 32px;
-  padding-top: 64px;
-  padding-bottom: 64px;
+  padding: 18px;
+  color: white;
+  @media (min-width: 1000px) {
+    font-size: 42px;
+  }
+  @media (max-width: 1000px) {
+    font-size: 32px;
+  }
+  @media (max-width: 700px) {
+    font-size: 32px;
+  }
+  @media (max-width: 420px) {
+    font-size: 20px;
+  }
+  @media (max-width: 300px) {
+    font-size: 18px;
+  }
+  h2 {
+    @media (min-width: 1000px) {
+      font-size: 20px;
+    }
+    @media (max-width: 1000px) {
+      font-size: 18px;
+    }
+    @media (max-width: 700px) {
+      font-size: 16px;
+    }
+    @media (max-width: 420px) {
+      font-size: 14px;
+    }
+    @media (max-width: 300px) {
+      font-size: 12px;
+    }
+  }
 }
 header {
-  h1 {
+  h1, h2 {
     font-family: 'Fredericka the Great', cursive;
     font-weight: lighter;
     text-transform: capitalize;
@@ -181,22 +206,24 @@ nav {
   padding-left: 2px;
 }
 .nav-toggles {
+  color: rgba(183, 183, 183, 0.7);
   margin: 3px;
-  border: 1px solid rgba($accentcolor,1);
+  border: 1px solid rgba(183, 183, 183, 0.7);
   display: inline-block;
   padding: 2px 0px 2px 5px;
   border-radius: 3px;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
   font-size: 12px;
-  box-shadow: 0 2px 1px 0px rgba($accentcolor,0.4);
+  box-shadow: 0 0 1px 0px rgba(183, 183, 183, 0.4);
   transition: all 0.5s ease;
   cursor: pointer;
   &:hover {
-    background: rgba($accentcolor,0.1);
+    color: rgba(0,0,0,0.8);
     transition: all 0.2s ease;
   }
   label{
+    color: inherit;
     pointer-events:none;
     cursor: inherit;
   }
@@ -210,35 +237,37 @@ nav {
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
     padding: 2px 5px;
-    background: rgba($accentcolor,0.7);
+    background: #ccc;
     color: white;
+    transition: all 0.2s ease;
   }
-  .finbadge { background: #4cc61e; }
-  .wipbadge { background: #e4ba21; }
-  .hldbadge { background: #f27e3f; }
 }
 .nav-toggeled {
+  color: $accentcolor;
   box-shadow: inset 0 2px 0px 0px rgba(0,0,0,0.3);
   border: 1px solid rgba($accentcolor,0.5);
   label, input {
     top: 2px;
     position: relative;
-    z-index: -1;
   }
   span {
     box-shadow: inset 0 2px 0px 0px rgba(0,0,0,0.3);
   }
   .finbadge { background: rgba(76,198,30,0.7); }
   .wipbadge { background: rgba(245,194,14,0.7); }
-  .hldbadge { background: rgba(255,147,88,0.7); }
+  .hldbadge { background: rgba(138,173,248,0.7); }
 }
 .nav-untoggles {
+  color: $accentcolor;
   box-shadow: 0 0px 0px 0px black;
   cursor: default;
   border-style: dashed;
-  border-color: rbba($accentcolor,0.6);
+  border-color: rgba($accentcolor,0.6);
   &:hover {
     background: rgba($accentcolor,0.0);
+  }
+  span {
+      background: rgba($accentcolor,0.7);
   }
 }
 .unselectable {
@@ -265,7 +294,7 @@ nav {
     background: rgba(245,194,14,0.7);
   }
   #pbar-hld {
-    background: rgba(255,147,88,0.7);
+    background: rgba(138,173,248,0.7);
   }
 }
 
@@ -299,8 +328,6 @@ nav {
     display: none;
   }
   div {
-    width: 128px;
-    height: 128px;
     display: inline-block;
     div {
       position: relative;
@@ -311,7 +338,6 @@ nav {
       }
       img {
         border: 1px solid rgba($accentcolor, 0.3);
-        border: 1px solid rgba($accentcolor, 0);
         width: 128px;
         height: 128px;
       }
@@ -381,7 +407,7 @@ nav {
       }
     }
     .hideimg {
-      opacity: 0.3;
+      opacity: 0.15;
       transition: all 0.3s ease;
       border: 1px solid rgba($accentcolor, 1);
     }
@@ -391,11 +417,13 @@ nav {
 // 1.0 Footer ------------------------------------------------------------------
 footer {
   opacity: 0.9;
-  background: linear-gradient(to left, rgba(0, 0, 0, 0.006), rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.006) );
-  padding: 0px 12px 2px 12px;
+  background: linear-gradient(to right, rgba(255,255,255,0),rgba(255,255,255,1),rgba(255,255,255,0));
   text-align: center;
-  margin: 10px auto;
+  margin: 100px auto;
   color: $accentcolor;
+  margin-bottom: 0;
+  padding-bottom: 10px;
+  box-shadow: 0 -7px 20px -15px rgba($accentcolor, 0.9);
   div {
     background: linear-gradient(to left, rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.04), rgba(0, 0, 0, 0.03), rgba(0, 0, 0, 0.01) );
     height: 1px;
