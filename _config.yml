@@ -2,8 +2,8 @@ title: Eris' Notes
 author: Eris Tubo
 email: eristubi@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Handrafted pixels / Coding aesthetic  / Eulogy of 2018 / Morning coffee kisses
-
+  Handcrafted Pixels / Aestetic Forms And Functions / Coding Phylosophies  / Eulogy Of 2018 / Morning coffee /
+version: V-0.1.12
 # Google Analytics
 google_analytics_id: UN-XXXX
 
@@ -11,14 +11,14 @@ google_analytics_id: UN-XXXX
 social_sites:
   twitter: eristubo
   github:  eristubo
-  #dribbble: jekyll
-  #facebook: jekyll
-  #flickr: jekyll
-  instagram: eristubo
-  #linkedin: jekyll
-  #pinterest: jekyll
-  #youtube: jekyll
-  #googleplus: +jekyll
+  #dribbble: eristubo
+  #facebook: eristubo
+  #flickr: eristubo
+  #instagram: eristubo
+  #linkedin: eristubo
+  #pinterest: eristubo
+  #youtube: eristub
+  #googleplus: +eristubo
   rss: rss
 
 # Exordium date format
