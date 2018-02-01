@@ -18,11 +18,18 @@ tags:
     - [ ] Navigation (dynamic)
     - [ ] Progress bar (dynamic)
     - [x] Thumbnails with meta
-  - [ ] About page (hidden)
+    - [ ] Preview with all meta stats
+  - [ ] About (hidden)
 
 - [ ] Responsive
   - [x] Desktop
-  - [x] Tablets 
+  - [x] Tablets
   - [ ] Mobile
 
+- [ ] No more single page
+
+- [ ] Comments & Share
+
+- [ ] Clean Ups & Media Queries 
+- [ ] Semantics & Accessibility
 - [ ] Debugging & performance tests

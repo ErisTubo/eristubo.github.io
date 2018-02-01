@@ -1,4 +1,8 @@
-<main>
+<main class="show-about">
+  <section id="about">
+    {% include about.html %}
+    <div class="about-ribbon"></div>
+  </section>
   <h2 class="section-title unselectable">Notes</h2>
   <section>
     {% for post in site.posts %}
